@@ -30,7 +30,7 @@ public class PlayerController implements InputProcessor {
 
     private Entity player;
 
-    public PlayerController(com.fire.rpg.ext.Entity player) {
+    public PlayerController(Entity player) {
         //Gdx.app.debug(TAG, "Construction" );
         keys.put(Keys.LEFT, false);
         keys.put(Keys.RIGHT, false);
@@ -230,7 +230,7 @@ public class PlayerController implements InputProcessor {
             //Gdx.app.debug(TAG, "RIGHT key");
             player.calculateNextPosition(Entity.Direction.RIGHT, delta);
             player.setState(Entity.State.WALKING);
-            player.setDirection(com.fire.rpg.ext.Entity.Direction.RIGHT);
+            player.setDirection(Entity.Direction.RIGHT);
         } else if (keys.get(Keys.UP)) {;
             player.calculateNextPosition(Entity.Direction.UP, delta);
             player.setState(Entity.State.WALKING);

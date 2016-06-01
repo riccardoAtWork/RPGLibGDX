@@ -11,9 +11,9 @@ import com.badlogic.gdx.maps.MapObject;
 import com.badlogic.gdx.maps.objects.RectangleMapObject;
 import com.badlogic.gdx.maps.tiled.renderers.OrthogonalTiledMapRenderer;
 import com.badlogic.gdx.math.Rectangle;
-import com.fire.rpg.Entity;
-import com.fire.rpg.MapManager;
-import com.fire.rpg.PlayerController;
+import com.fire.rpg.domain.Entity;
+import com.fire.rpg.domain.PlayerController;
+import com.fire.rpg.utils.MapManager;
 
 
 public class MainGameScreen implements Screen {
@@ -123,6 +123,7 @@ public class MainGameScreen implements Screen {
         controller.dispose();
         Gdx.input.setInputProcessor(null);
         mapRenderer.dispose();
+
     }
 
     private void setupViewport(int width, int height) {
